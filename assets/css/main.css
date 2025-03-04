@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2282,6 +2283,17 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
+	ul.actionsLineBreak {
+		flex-direction: -moz-flex-direction;
+		flex-direction: -webkit-flex-direction;
+		flex-direction: -ms-flex-direction;
+		flex-direction: row;
+		flex-wrap: -moz-flex-wrap;
+		flex-wrap: -webkit-flex-wrap;
+		flex-wrap: -ms-flex-wrap;
+		flex-wrap: wrap;
+	}
+
 		ul.actions li {
 			padding: 0 0 0 1em;
 			vertical-align: middle;
@@ -3380,7 +3392,7 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("/images/banner.jpg");
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3473,11 +3485,23 @@ input, select, textarea {
 					margin-right: 0;
 				}
 
-				#banner > .inner .content p {
+				/* #banner > .inner .content p {
 					font-size: 0.7em;
 					font-weight: 600;
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
+				} */
+
+				#banner > .inner .content .profile {
+					margin: 0;
+					padding: 0;
+					border: 0;
+					font-size: 100%;
+					font: inherit;
+					vertical-align: baseline;
+					/* letter-spacing: 0.03em; */
+					padding-right: 1em;
+					text-transform: none;
 				}
 
 		#banner.major {
@@ -3708,14 +3732,14 @@ input, select, textarea {
 /* Footer */
 
 	#footer .copyright {
-		font-size: 0.8em;
+		font-size: 0.92em;
 		list-style: none;
 		padding-left: 0;
 	}
 
 		#footer .copyright li {
-			border-left: solid 1px rgba(212, 212, 255, 0.1);
-			color: rgba(244, 244, 255, 0.2);
+			border-left: solid 1px rgba(234, 234, 250, 0.1);
+			color: rgba(255, 255, 255, 0.521);
 			display: inline-block;
 			line-height: 1;
 			margin-left: 1em;
@@ -3950,3 +3974,141 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+
+/* Others */
+.centerElement {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cardGeneric {
+	background-color:rgba(62, 66, 93, 1);
+	box-shadow: 0 0 0 1px hsla(231, 7%, 60%, 0.05),
+        0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),
+        0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),
+        0 3.5px 6px hsla(230, 13%, 9%, 0.09);
+    border-radius: 0.375em;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.cardGeneric > .content {
+    padding-top: 4.0rem;
+	padding-bottom: 0.8rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.skillButtonMargin {
+	margin-bottom: 1rem;
+}
+
+.noMargin {
+	margin: 0 0 0 0 !important;
+}
+
+.unemphasiedWorkExpTitle {
+	color: rgb(165, 165, 165);
+	margin-bottom: 1rem !important;
+}
+
+.resumeProjectLink {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.resumeProjectLink > i {
+	margin-right: 0.5rem;
+}
+
+/* Flickity customisation */
+.carousel {
+	width: 80% !important;
+	height: 24em;
+	background: #FAFAFA;
+}
+
+.carousel-cell {
+	/* center images in cells with flexbox */
+	display: flex !important;
+	width: 100%  !important;
+	height: 100%  !important;
+	align-items: center  !important;
+	justify-content: center  !important;
+	overflow: hidden  !important;
+	background: #222  !important;
+}
+
+.carousel-cell > img {
+	display: block !important;
+	/* object-fit: cover !important; */
+	/* width: 100% !important;
+	height: 100% !important; */
+	max-height: 100% !important;
+	margin: 0 auto !important;
+	max-width: 100% !important;
+}
+
+/* position dots in carousel */
+/* .flickity-page-dots {
+	bottom: 0px !important;
+} */
+
+/* white circles */
+.flickity-page-dots .dot {
+	width: 12px !important;
+	height: 12px !important;
+	opacity: 1 !important;
+	background: transparent !important;
+	border: 2px solid white !important;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+	background: white !important;
+}
+
+/* no circle */
+.flickity-button {
+	position: absolute !important;
+	background: #6b89caef !important;
+}
+
+button.flickity-button.flickity-prev-next-button {
+	width: 30px !important;
+	height: 30px !important;
+	border-radius: 5px !important;
+	box-shadow: none !important;
+}
+
+/* icon color */
+.flickity-button-icon {
+	fill: rgb(217, 223, 243) !important;
+}
+
+/* position outside */
+button.flickity-button.flickity-prev-next-button.previous {
+	left: -50px !important;
+	padding: 0 1.75em !important;
+}
+
+button.flickity-button.flickity-prev-next-button.next {
+	right: -50px !important;
+	padding: 0 1.75em !important;
+}
+
+button.flickity-button.flickity-prev-next-button.next:before,
+.button.flickity-button.flickity-prev-next-button.next:before {
+	background-image: none !important;
+}
+
+button.flickity-button.flickity-prev-next-button.next:after,
+.button.flickity-button.flickity-prev-next-button.next:after {
+	background-image: none !important;
+}
