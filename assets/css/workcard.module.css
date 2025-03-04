@@ -1,0 +1,95 @@
+﻿/* assets/css/workcard.css */
+.card {
+    display: grid;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05),
+        0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),
+        0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),
+        0 3.5px 6px hsla(230, 13%, 9%, 0.09);
+    border-radius: 0.375em;
+    overflow: hidden;
+    /* margin-bottom: 2rem; */
+    height: 100%;
+}
+
+.card > .imgWrapper {
+    height: 16em;
+}
+
+.card > .imgWrapper > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card > .content {
+    padding: 2rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.card > .content > .title {
+    color: hsl(225, 4%, 47%) !important;
+    margin-bottom: 0.0rem !important;
+}
+
+.card > .content > .desc {
+    /* max-width: 18rem; */
+    font-size: 0.9375rem;
+    color: hsl(225, 4%, 47%);
+    text-align: justify; 
+}
+
+.card > .content footer > .btn {
+    width: 100%;
+    font-size: 0.9375rem;
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375em;
+    font-size: 1em;
+    text-decoration: none;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: 0.2s;
+    will-change: transform;
+}
+
+.card > .content footer > .btn:focus-visible {
+    outline: none;
+}
+
+.card > .content footer > .btn:active {
+    transform: translateY(2px);
+}
+
+.card > .content footer > .btnPrimary {
+    background: hsl(250, 84%, 54%);
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
+        0 1px 3px hsla(250, 84%, 38%, 0.25),
+        0 2px 6px hsla(250, 84%, 38%, 0.1),
+        0 6px 10px -2px hsla(250, 84%, 38%, 0.25);
+    color: hsl(0, 0%, 100%);
+}
+
+.card > .content footer > .btnPrimary:hover {
+    background: hsl(250, 84%, 60%);
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
+        0 1px 2px hsla(250, 84%, 38%, 0.25),
+        0 1px 4px hsla(250, 84%, 38%, 0.1),
+        0 3px 6px -2px hsla(250, 84%, 38%, 0.25);
+}
+
+.card > .content footer > .btnPrimary:focus-visible {
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
+        0 1px 2px hsla(250, 84%, 38%, 0.25),
+        0 1px 4px hsla(250, 84%, 38%, 0.1),
+        0 3px 6px -2px hsla(250, 84%, 38%, 0.25),
+        0 0 0 2px hsl(0, 0%, 100%),
+        0 0 0 4px hsl(250, 84%, 54%);
+}
